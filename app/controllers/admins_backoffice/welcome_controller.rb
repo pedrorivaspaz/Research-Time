@@ -1,5 +1,4 @@
-class AdminsBackoffice::WelcomeController < ApplicationController
-  layout 'admins_backoffice'
+class AdminsBackoffice::WelcomeController < AdminsBackofficeController
   def index
   end
 end
