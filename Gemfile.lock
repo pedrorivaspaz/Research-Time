@@ -82,7 +82,9 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (>= 1.5, < 3.0)
       xpath (~> 3.2)
+    cocoon (1.2.15)
     concurrent-ruby (1.2.2)
+    connection_pool (2.4.1)
     crass (1.0.6)
     date (3.3.3)
     debug (1.7.2)
@@ -100,6 +102,8 @@ GEM
     ffi (1.15.5)
     globalid (1.1.0)
       activesupport (>= 5.0)
+    hashie (5.0.0)
+    hiredis (0.6.3)
     i18n (1.13.0)
       concurrent-ruby (~> 1.0)
     importmap-rails (1.1.6)
@@ -153,6 +157,16 @@ GEM
     nokogiri (1.14.3-x86_64-linux)
       racc (~> 1.4)
     orm_adapter (0.5.0)
+    pdf-core (0.9.0)
+    prawn (2.4.0)
+      pdf-core (~> 0.9.0)
+      ttfunk (~> 1.7)
+    prawn-rails (1.4.2)
+      actionview (>= 3.1.0)
+      prawn
+      prawn-table
+    prawn-table (0.2.2)
+      prawn (>= 1.3.0, < 3.0.0)
     public_suffix (5.0.1)
     puma (5.6.5)
       nio4r (~> 2.0)
@@ -190,6 +204,10 @@ GEM
       thor (~> 1.0)
       zeitwerk (~> 2.5)
     rake (13.0.6)
+    redis (5.0.6)
+      redis-client (>= 0.9.0)
+    redis-client (0.14.1)
+      connection_pool
     regexp_parser (2.8.0)
     reline (0.3.4)
       io-console (~> 0.5)
@@ -208,6 +226,9 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
+    searchkick (5.3.0)
+      activemodel (>= 6.1)
+      hashie
     selenium-webdriver (4.9.1)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
@@ -225,6 +246,9 @@ GEM
     thor (1.2.1)
     tilt (2.2.0)
     timeout (0.3.2)
+    trix (0.10.1)
+      rails
+    ttfunk (1.7.0)
     tty-cursor (0.7.1)
     tty-spinner (0.9.3)
       tty-cursor (~> 0.7)
@@ -259,21 +283,27 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   capybara
+  cocoon
   debug
   devise
   faker
+  hiredis
   importmap-rails
   jbuilder
   kaminari
   kaminari-i18n
+  prawn-rails
   puma (~> 5.0)
   rails (~> 7.0.4, >= 7.0.4.3)
   rails-i18n
+  redis
   sass-rails
+  searchkick
   selenium-webdriver
   sprockets-rails
   sqlite3 (~> 1.4)
   stimulus-rails
+  trix
   tty-spinner
   turbo-rails
   tzinfo-data

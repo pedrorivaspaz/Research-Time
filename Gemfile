@@ -49,6 +49,12 @@ gem 'faker'
 gem 'sass-rails'
 gem 'kaminari'
 gem 'kaminari-i18n'
+gem 'cocoon'
+gem 'prawn-rails'
+gem 'redis'
+gem 'hiredis'
+gem 'trix'
+gem 'searchkick'
 
 
 # Use Sass to process CSS
